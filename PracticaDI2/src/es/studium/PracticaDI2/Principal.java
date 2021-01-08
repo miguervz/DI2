@@ -43,7 +43,7 @@ public class Principal extends JFrame implements ActionListener {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+		setLocationRelativeTo(null);
 		JButton bArticulos = new JButton("ARTICULOS");
 		bArticulos.setFont(new Font("Tahoma", Font.BOLD, 20));
 		bArticulos.addActionListener(new ActionListener()

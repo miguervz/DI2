@@ -45,6 +45,8 @@ public class Articulos extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
+		setLocationRelativeTo(null);
+
 		contentPane.setFont(new Font("Tempus Sans ITC", Font.BOLD, 10));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);

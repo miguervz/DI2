@@ -5,7 +5,19 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/iReport"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="E:/mysql-connector-java-5.1.46.jar"/>
+	<classpathentry kind="lib" path="C:/Users/migue/Desktop/commons-net-3.6/commons-net-3.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/migue/Desktop/commons-net-3.6/commons-net-3.6-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/migue/Desktop/commons-net-3.6/commons-net-examples-3.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/migue/Desktop/JARs/commons.collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/migue/Desktop/JARs/commons-beanutils-1.9.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/migue/Desktop/JARs/commons-digester-2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/migue/Desktop/JARs/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/migue/Desktop/JARs/groovy-all-2.4.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/migue/Desktop/JARs/itextpdf-5.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/migue/Desktop/JARs/itext-pdfa-5.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/migue/Desktop/JARs/jasperreports-6.0.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

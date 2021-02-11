@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="informeTiendecita" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2d6b70a9-5228-418f-b053-295d541ad4da">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="fechaInicio" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fechaFinal" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM tickets where fechaTicket<=$P{fechaFinal}and fechaTicket>=$P{fechaInicio};]]>
+	</queryString>
+	<field name="idTicket" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaTicket" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="precioTicket" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idArticulo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="91" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="79" forecolor="#009900" backcolor="#CCFFCC" uuid="455978dc-f6cc-4e55-a90a-d13fa36d09d1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Algerian" size="22"/>
+				</textElement>
+				<text><![CDATA[Tíckets]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="bce11692-1d6f-420e-b604-617662aa5b9c"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID TÍCKET]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="353" y="0" width="100" height="20" uuid="e0475c36-6dc5-4d53-acb9-7ab1fb43307e"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID ARTÍCULO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="468" y="0" width="100" height="20" uuid="07d0f52e-0d69-41b9-9b95-580a60bd3c2f"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRECIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="0" width="186" height="20" uuid="fdfe5775-f995-4f90-903b-df1e74f4c4da"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="79" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="152" y="0" width="186" height="20" uuid="07e91850-5e82-4d8c-8c18-9b6b7ac6c214"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{fechaTicket}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="494" y="0" width="45" height="20" uuid="1aa42ffe-17bd-495c-a341-b7b997760492"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{precioTicket}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="f4d43ff2-be17-4d6a-9716-57ea8f7e694b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{idTicket}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="540" y="0" width="15" height="20" uuid="315352c9-8a34-48e1-a72b-10d21e09dff4"/>
+				<text><![CDATA[€]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="376" y="0" width="44" height="20" uuid="d0906618-a862-4158-8abe-cb3b354ec2b3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{idArticulo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

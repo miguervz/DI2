@@ -23,6 +23,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.awt.event.ActionEvent;
 import java.awt.Choice;
+import java.awt.Dialog;
 
 public class consultaTicket extends JFrame {
 
@@ -60,7 +61,8 @@ public class consultaTicket extends JFrame {
 		String password = "Studium2019;";
 		setTitle("Consulta Ticket");
 		setLocationRelativeTo(null);
-
+		Dialog d = new Dialog(this, "Operación Inserción", true);
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -207,6 +209,17 @@ public class consultaTicket extends JFrame {
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD, 10));
 		lblNewLabel_3.setBounds(66, 136, 154, 13);
 		contentPane.add(lblNewLabel_3);
+		
+		JButton btnNewButton_1_1_1 = new JButton("iReport");
+		btnNewButton_1_1_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Frame art=new iReport();
+	             art.setVisible(true);
+			}
+		});
+		btnNewButton_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 10));
+		btnNewButton_1_1_1.setBounds(305, 178, 100, 44);
+		contentPane.add(btnNewButton_1_1_1);
 		
 		
 		

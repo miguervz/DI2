@@ -24,17 +24,29 @@ import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import java.awt.event.ItemListener;
 import java.awt.event.ItemEvent;
+import java.awt.Desktop;
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperExportManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 public class consultaArticulos extends JFrame {
 
 
 	private JPanel contentPane;
- private Statement statement;
- private ResultSet rs;
- private Connection connection;
-	/**
-	 * Launch the application.
-	 */
+	private Statement statement;
+	private ResultSet rs;
+	private Connection connection;
+	String driver = "com.mysql.jdbc.Driver";
+	String url = "jdbc:mysql://localhost:3306/Tiendecita?useSSL=false";
+	String login = "root";
+	String password = "Studium2019;";
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -52,10 +64,7 @@ public class consultaArticulos extends JFrame {
 	 * Create the frame.
 	 */
 	public consultaArticulos() {
-		String driver = "com.mysql.jdbc.Driver";
-		String url = "jdbc:mysql://localhost:3306/Tiendecita?useSSL=false";
-		String login = "root";
-		String password = "Studium2019;";
+
 		setTitle("Consulta Artículos");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -97,12 +106,12 @@ public class consultaArticulos extends JFrame {
 		contentPane.add(lblNewLabel_6);
 
 		Choice choice_1 = new Choice();
-				
+
 		String sentencia = "SELECT * FROM articulos";
 		connection = null;
 		statement = null;
-		 rs = null;
-		
+		rs = null;
+
 		try
 		{
 			Class.forName(driver);
@@ -131,7 +140,7 @@ public class consultaArticulos extends JFrame {
 			{
 
 				choice_1.add(rs.getInt("idArticulo")+" "+rs.getString("nombreArticulo")+"\n");
-				
+
 			}
 
 
@@ -143,38 +152,38 @@ public class consultaArticulos extends JFrame {
 
 		try
 		{
-		statement =connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
+			statement =connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
 
-		rs=statement.executeQuery("SELECT* FROM articulos");
-		if(rs.next())
-		{
-			
-			lblNewLabel_4.setText(rs.getString("descripcionArticulo"));
-			lblNewLabel_5.setText(rs.getString("precioArticulo"));
-			lblNewLabel_6.setText(rs.getString("numeroStock"));
-		
+			rs=statement.executeQuery("SELECT* FROM articulos");
+			if(rs.next())
+			{
+
+				lblNewLabel_4.setText(rs.getString("descripcionArticulo"));
+				lblNewLabel_5.setText(rs.getString("precioArticulo"));
+				lblNewLabel_6.setText(rs.getString("numeroStock"));
 
 
-				
-		}}
+
+
+			}}
 		catch(SQLException e)
 		{
-		System.out.println("Error en la sentencia SQL");
+			System.out.println("Error en la sentencia SQL");
 		}
 		choice_1.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
-				
+
 				String nombreItem = new String(choice_1.getSelectedItem());
 
 
 				try
 				{
 					int posicion = nombreItem.indexOf(" ");
-					
+
 					String id = nombreItem.substring(0, posicion);
 					statement = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
 
-					 rs = statement.executeQuery("SELECT* FROM articulos WHERE idArticulo="+id);
+					rs = statement.executeQuery("SELECT* FROM articulos WHERE idArticulo="+id);
 					if(rs.next())
 					{
 
@@ -200,7 +209,7 @@ public class consultaArticulos extends JFrame {
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 10));
 		lblNewLabel.setBounds(66, 31, 154, 19);
 		contentPane.add(lblNewLabel);
-		
+
 		JButton btnNewButton = new JButton("Volver");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -212,8 +221,43 @@ public class consultaArticulos extends JFrame {
 		btnNewButton.setBounds(166, 186, 85, 21);
 		contentPane.add(btnNewButton);
 
+		JButton btnNewButton_1 = new JButton("iReport");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try
+				{
+					// Compilar el informe generando fichero jasper
+					JasperCompileManager.compileReportToFile("Articulos.jrxml");
+					System.out.println("Fichero informeTiendecita.jasper generado CORRECTAMENTE!");
+					// Objeto para guardar parámetros necesarios para el informe
+					HashMap<String,Object> parametros = new HashMap<String,Object>();
+					// Cargar el informe compilado
+					JasperReport report = (JasperReport)
+							JRLoader.loadObjectFromFile("informeTiendecita.jasper");
+					// Conectar a la base de datos para sacar la información
+					Class.forName("com.mysql.jdbc.Driver");
+					String servidor = "jdbc:mysql://localhost:3306/tiendecita?useSSL=false";
+					String usuarioDB = "root";
+					String passwordDB = "Studium2019;";
+					java.sql.Connection conexion = DriverManager.getConnection(servidor, usuarioDB,
+							passwordDB);
+					// Completar el informe con los datos de la base de datos
+					JasperPrint print = JasperFillManager.fillReport(report, parametros, conexion);
+					// Mostrar el informe en JasperViewer
+					JasperViewer.viewReport(print, false);
+
+				}
+				catch (Exception e1)
+				{
+					System.out.println("Error: " + e1.toString());
+				}
+			}
+		});
+		btnNewButton_1.setBounds(276, 186, 85, 21);
+		contentPane.add(btnNewButton_1);
+
 		JButton btnNewButton_1_1 = new JButton("Atrás");
-	
+
 		btnNewButton_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();

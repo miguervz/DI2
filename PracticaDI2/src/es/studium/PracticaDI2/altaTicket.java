@@ -58,7 +58,7 @@ public class altaTicket extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * Creamos el frame de alta Ticket
 	 */
 	public altaTicket() {
 		setTitle("Alta Ticket");
@@ -92,6 +92,9 @@ public class altaTicket extends JFrame {
 		JButton ok2 = new JButton("Ok");
 
 		c.add(ok2);
+		/**
+		 * Funcionalidad del botón ok
+		 */
 		ok.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				d.setVisible(false);
@@ -100,6 +103,9 @@ public class altaTicket extends JFrame {
 	             art.setVisible(true);
 			}
 		});
+		/**
+		 * Funcionalidad del botón ok2
+		 */
 		ok2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				c.setVisible(false);
@@ -158,7 +164,9 @@ public class altaTicket extends JFrame {
 		textField_1.setBounds(344, 117, 45, 19);
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
-		
+		/**
+		 * Funcionalidad del botón Atrás
+		 */
 		JButton btnNewButton = new JButton("Atrás");
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 10));
 		btnNewButton.addActionListener(new ActionListener() {
@@ -170,13 +178,18 @@ public class altaTicket extends JFrame {
 		});
 		btnNewButton.setBounds(246, 178, 100, 45);
 		contentPane.add(btnNewButton);
-		
+		/**
+		 * Funcionalidad del botón Alta
+		 */
 		JButton btnNewButton_1 = new JButton("Alta");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				try
 				{
+					/**
+					 * Con esto vamos a pasar de formato de DATA europeo a americano
+					 */
 				String articulo = new String(choice.getSelectedItem());
 				int pos = articulo.indexOf(" ");
 					String nEscuadron = articulo.substring(0,pos);

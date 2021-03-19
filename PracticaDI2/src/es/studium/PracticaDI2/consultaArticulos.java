@@ -228,6 +228,9 @@ public class consultaArticulos extends JFrame {
 		contentPane.add(btnNewButton);
 
 		JButton btnNewButton_1 = new JButton("iReport");
+		/**
+		 * Funcionalidad del botón 1
+		 */
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try

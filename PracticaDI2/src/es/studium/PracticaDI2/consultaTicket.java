@@ -188,6 +188,9 @@ public class consultaTicket extends JFrame {
 		});
 		choice.setBounds(247, 32, 156, 18);
 		contentPane.add(choice);
+		/**
+		 * Funcionalidad del botón Atrás
+		 */
 		JButton btnNewButton_1_1 = new JButton("Atrás");
 		btnNewButton_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

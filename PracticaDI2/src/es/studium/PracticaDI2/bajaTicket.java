@@ -88,6 +88,9 @@ public class bajaTicket extends JFrame {
 		d.setLocationRelativeTo(null);
 		JButton ok = new JButton("Ok");
 		d.add(ok);
+		/**
+		 * Funcionalidad del botón ok
+		 */
 		ok.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -133,6 +136,9 @@ public class bajaTicket extends JFrame {
 		{
 			System.out.println("Error en la sentencia SQL");
 		}
+		/**
+		 * Funcionalidad del botón 1
+		 */
 		JButton btnNewButton_1 = new JButton("Baja");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -162,7 +168,9 @@ public class bajaTicket extends JFrame {
 		btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 10));
 		btnNewButton_1.setBounds(86, 176, 100, 44);
 		contentPane.add(btnNewButton_1);
-		
+		/**
+		 * Funcionalidad del botón 1_1
+		 */
 		JButton btnNewButton_1_1 = new JButton("Atrás");
 		btnNewButton_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

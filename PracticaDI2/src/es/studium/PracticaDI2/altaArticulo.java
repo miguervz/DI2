@@ -97,7 +97,7 @@ public class altaArticulo extends JFrame {
 			}
 		});
 		/**
-		 * Valores del botón ok2
+		 * Funcionalidad del botón ok2
 		 */
 		ok2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -156,7 +156,7 @@ public class altaArticulo extends JFrame {
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
 		/**
-		 * Valores del botón Atrás
+		 * Funcionalidad del botón Atrás
 		 */
 		JButton btnNewButton = new JButton("Atrás");
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 10));
@@ -170,7 +170,7 @@ public class altaArticulo extends JFrame {
 		btnNewButton.setBounds(246, 178, 100, 45);
 		contentPane.add(btnNewButton);
 		/**
-		 * Valores del botón Alta
+		 * Funcionalidad del botón Alta
 		 */
 		JButton btnNewButton_1 = new JButton("Alta");
 		btnNewButton_1.addActionListener(new ActionListener() {

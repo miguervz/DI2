@@ -57,7 +57,9 @@ public class Articulos extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+		/**
+		 * Funcionalidad del botón
+		 */
 		JButton btnNewButton = new JButton("Alta");
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 13));
 		btnNewButton.addActionListener(new ActionListener() {
@@ -71,6 +73,9 @@ public class Articulos extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Baja");
+		/**
+		 * Funcionalidad del botón 1
+		 */
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -81,7 +86,9 @@ public class Articulos extends JFrame {
 		btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 13));
 		btnNewButton_1.setBounds(10, 57, 416, 37);
 		contentPane.add(btnNewButton_1);
-		
+		/**
+		 * Funcionalidad del botón 2
+		 */
 		JButton btnNewButton_2 = new JButton("Consulta");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -90,10 +97,13 @@ public class Articulos extends JFrame {
 	             art.setVisible(true);
 			}
 		});
+		
 		btnNewButton_2.setFont(new Font("Tahoma", Font.BOLD, 13));
 		btnNewButton_2.setBounds(10, 104, 416, 37);
 		contentPane.add(btnNewButton_2);
-		
+		/**
+		 * Funcionalidad del botón 3
+		 */
 		JButton btnNewButton_3 = new JButton("Modificación");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -105,7 +115,9 @@ public class Articulos extends JFrame {
 		btnNewButton_3.setFont(new Font("Tahoma", Font.BOLD, 13));
 		btnNewButton_3.setBounds(10, 151, 416, 37);
 		contentPane.add(btnNewButton_3);
-		
+		/**
+		 * Funcionalidad del botón 4
+		 */
 		JButton btnNewButton_4 = new JButton("Atrás");
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

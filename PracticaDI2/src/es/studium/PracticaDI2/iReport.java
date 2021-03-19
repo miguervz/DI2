@@ -1,5 +1,11 @@
 package es.studium.PracticaDI2;
-
+/**
+ * Pantalla IReport
+ * 
+ * @author migue
+ * @since 01/01/2021
+ * @version 1.0
+ */
 import java.awt.Desktop;
 import java.awt.EventQueue;
 import java.awt.FlowLayout;
@@ -45,7 +51,7 @@ private String fechaFinal;
 	private JTextField textField;
 	private JTextField textField_1;
 	/**
-	 * Launch the application.
+	 * Se inicia el main
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -61,7 +67,7 @@ private String fechaFinal;
 	}
 
 	/**
-	 * Create the frame.
+	 * Se crea la pantalla para generear el iReport
 	 */
 	public iReport() {
 
@@ -103,7 +109,9 @@ private String fechaFinal;
 			public void actionPerformed(ActionEvent e) {
 
 				
-
+				/**
+				 * Se crea el método para general el ireport
+				 */
 				try
 				{
 					fechaInicio= convertirFecha(textField.getText());
@@ -176,7 +184,13 @@ d.setVisible(true);
 
 	}
 
+	 /**
 
+     * Método que devuelve la fecha en formato europeo
+
+     * @return fecha
+
+     */
 	public static String convertirFecha(String fecha) {
 
 		int posicion = fecha.indexOf("-");
@@ -187,4 +201,6 @@ d.setVisible(true);
 		String año=subcadena.substring(posicion2+1);
 		String fechaValida=(año+"-"+mes+"-"+dia);
 		return fechaValida;
-	}}
+	}
+	 //Cierre del método
+	}

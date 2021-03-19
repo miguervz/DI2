@@ -18,6 +18,6 @@
 	<classpathentry kind="lib" path="C:/Users/migue/Desktop/JARs/groovy-all-2.4.7.jar"/>
 	<classpathentry kind="lib" path="C:/Users/migue/Desktop/JARs/itextpdf-5.5.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/migue/Desktop/JARs/itext-pdfa-5.5.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/migue/Desktop/JARs/jasperreports-6.0.0.jar"/>
+	<classpathentry kind="lib" path="E:/jasperreports-6.0.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

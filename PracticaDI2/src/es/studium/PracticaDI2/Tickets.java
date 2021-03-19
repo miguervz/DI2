@@ -1,5 +1,11 @@
 package es.studium.PracticaDI2;
-
+/**
+ * Pantalla  Ticket
+ * 
+ * @author migue
+ * @since 01/01/2021
+ * @version 1.0
+ */
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -18,7 +24,7 @@ public class Tickets extends JFrame {
 	private JPanel contentPane;
 
 	/**
-	 * Launch the application.
+	 * Se inicia el main
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -34,7 +40,7 @@ public class Tickets extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * Se crea la frame de tickets
 	 */
 	public Tickets() {
 		setTitle("Tickets");

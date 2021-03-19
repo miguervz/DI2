@@ -1,5 +1,11 @@
 package es.studium.PracticaDI2;
-
+/**
+ * Pantalla Articulos
+ * 
+ * @author migue
+ * @since 01/01/2021
+ * @version 1.0
+ */
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -22,7 +28,7 @@ public class Articulos extends JFrame {
 	private JPanel contentPane;
 
 	/**
-	 * Launch the application.
+	 * Se inicia el main
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -38,7 +44,7 @@ public class Articulos extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * Se crea la pantalla Artículos
 	 */
 	public Articulos() {
 		setTitle("Artículos");

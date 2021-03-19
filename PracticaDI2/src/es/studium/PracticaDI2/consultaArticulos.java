@@ -1,5 +1,11 @@
 package es.studium.PracticaDI2;
-
+/**
+ * Pantalla Consulta Articulo
+ * 
+ * @author migue
+ * @since 01/01/2021
+ * @version 1.0
+ */
 import java.awt.BorderLayout;
 import java.awt.Choice;
 import java.awt.EventQueue;
@@ -61,7 +67,7 @@ public class consultaArticulos extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * Se crea la pantalla consulta Artículos
 	 */
 	public consultaArticulos() {
 

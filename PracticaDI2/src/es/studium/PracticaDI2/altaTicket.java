@@ -1,5 +1,11 @@
 package es.studium.PracticaDI2;
-
+/**
+ * Pantalla alta Ticket
+ * 
+ * @author migue
+ * @since 01/01/2021
+ * @version 1.0
+ */
 import java.awt.BorderLayout;
 import java.awt.Dialog;
 import java.awt.EventQueue;
@@ -36,7 +42,7 @@ public class altaTicket extends JFrame {
 	Statement statement = null;
 	ResultSet rs = null;
 	/**
-	 * Launch the application.
+	 * Se inicia el main
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {

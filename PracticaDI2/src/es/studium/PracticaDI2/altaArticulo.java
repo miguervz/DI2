@@ -1,5 +1,11 @@
 package es.studium.PracticaDI2;
-
+/**
+ * Pantalla alta artículo
+ * 
+ * @author migue
+ * @since 01/01/2021
+ * @version 1.0
+ */
 import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.Dialog;
@@ -55,7 +61,7 @@ public class altaArticulo extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * Creación de la frame altaArticulo
 	 */
 	public altaArticulo() {
 		setResizable(false);
@@ -90,6 +96,9 @@ public class altaArticulo extends JFrame {
 	            
 			}
 		});
+		/**
+		 * Valores del botón ok2
+		 */
 		ok2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -146,7 +155,9 @@ public class altaArticulo extends JFrame {
 		textField_1.setBounds(344, 117, 45, 19);
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
-		
+		/**
+		 * Valores del botón Atrás
+		 */
 		JButton btnNewButton = new JButton("Atrás");
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 10));
 		btnNewButton.addActionListener(new ActionListener() {
@@ -158,7 +169,9 @@ public class altaArticulo extends JFrame {
 		});
 		btnNewButton.setBounds(246, 178, 100, 45);
 		contentPane.add(btnNewButton);
-		
+		/**
+		 * Valores del botón Alta
+		 */
 		JButton btnNewButton_1 = new JButton("Alta");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

@@ -1,5 +1,11 @@
 package es.studium.PracticaDI2;
-
+/**
+ * Pantalla modificar Artículo
+ * 
+ * @author migue
+ * @since 01/01/2021
+ * @version 1.0
+ */
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.FlowLayout;
@@ -40,7 +46,7 @@ public class modificarArticulo extends JFrame {
 	 private JTextField textField_3;
 
 	/**
-	 * Launch the application.
+	 * Se inicia el main
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -56,7 +62,7 @@ public class modificarArticulo extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 *Se crea modficar artículo
 	 */
 	public modificarArticulo() {
 		setResizable(false);

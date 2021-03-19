@@ -1,5 +1,11 @@
 package es.studium.PracticaDI2;
-
+/**
+ * Pantalla Baja Articulo
+ * 
+ * @author migue
+ * @since 01/01/2021
+ * @version 1.0
+ */
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.FlowLayout;
@@ -32,7 +38,7 @@ public class bajaArticulo extends JFrame {
 	private ResultSet rs;
 	private Connection connection;
 	/**
-	 * Launch the application.
+	 * Se inicia el main
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -48,7 +54,7 @@ public class bajaArticulo extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * Se crea la pantalla baja Artículos
 	 */
 	public bajaArticulo() {
 		setTitle("Baja Artículos");

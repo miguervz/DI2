@@ -1,5 +1,11 @@
 package es.studium.PracticaDI2;
-
+/**
+ * Pantalla modificar Ticket
+ * 
+ * @author migue
+ * @since 01/01/2021
+ * @version 1.0
+ */
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.FlowLayout;
@@ -38,7 +44,7 @@ public class modificarTicket extends JFrame {
 	 private Connection connection;
 	 private JTextField textField;
 	/**
-	 * Launch the application.
+	 * Se inicia el main
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -54,7 +60,7 @@ public class modificarTicket extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * Se crea la frame modificar Ticket
 	 */
 	public modificarTicket() {
 		String driver = "com.mysql.jdbc.Driver";

@@ -1,5 +1,11 @@
 package es.studium.PracticaDI2;
-
+/**
+ * Pantalla Principal 
+ * 
+ * @author migue
+ * @since 01/01/2021
+ * @version 1.0
+ */
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.Frame;
@@ -17,7 +23,7 @@ public class Principal extends JFrame implements ActionListener {
 	private JPanel contentPane;
 
 	/**
-	 * Launch the application.
+	 * Se inicia la aplicación
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -33,7 +39,7 @@ public class Principal extends JFrame implements ActionListener {
 	}
 
 	/**
-	 * Create the frame.
+	 * Se crea el menú principal
 	 */
 	public Principal() {
 		setTitle("Tiendecita");
@@ -58,7 +64,9 @@ public class Principal extends JFrame implements ActionListener {
 				});
 		bArticulos.setBounds(10, 72, 192, 104);
 		contentPane.add(bArticulos);
-		
+		/**
+		 * Valores del botón bTicket
+		 */
 		JButton bTickets = new JButton("TICKETS");
 		bTickets.setFont(new Font("Tahoma", Font.BOLD, 20));
 		bTickets.addActionListener(new ActionListener() {
